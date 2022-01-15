@@ -17,5 +17,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return auth()->user();
 });
+Route::post('/orders-with-json', 'OrderController@AddOrdersWithJSON');
+Route::post('/order-items-with-json/{order}', 'OrderController@AddOrderItemsWithJSON');
 
 Wave::api();

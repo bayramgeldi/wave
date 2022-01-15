@@ -20,5 +20,6 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+Route::get('/orders', 'OrderController@getOrders')->name('orders.get_orders');
 // Include Wave Routes
 Wave::routes();
